@@ -6,10 +6,19 @@
     <description>Recent content on QiushiSun&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2020 18:23:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 18:23:37 +0800</lastBuildDate>
     
 	<atom:link href="https://qiushisun.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloud-Computing Lecture3</title>
+      <link>https://qiushisun.github.io/2020/10/cloud-computing-lecture3/</link>
+      <pubDate>Tue, 20 Oct 2020 18:23:37 +0800</pubDate>
+      
+      <guid>https://qiushisun.github.io/2020/10/cloud-computing-lecture3/</guid>
+      <description>&lt;p&gt;云计算应用与开发：云计算背后的技术-2&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Cloud-Computing Lecture2</title>
