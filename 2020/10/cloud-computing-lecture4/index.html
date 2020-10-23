@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Qiushi Sun">
 <meta name="keywords" content="cloud-computing">
-<meta name="description" content="云计算应用与开发：云计算背后的技术-2">
+<meta name="description" content="云计算应用与开发：云计算背后的技术-2 Cont&rsquo;d">
 
 
-<meta property="og:description" content="云计算应用与开发：云计算背后的技术-2">
+<meta property="og:description" content="云计算应用与开发：云计算背后的技术-2 Cont&rsquo;d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cloud-Computing Lecture3">
-<meta name="twitter:title" content="Cloud-Computing Lecture3">
-<meta property="og:url" content="https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
-<meta property="twitter:url" content="https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+<meta property="og:title" content="Cloud-Computing Lecture4">
+<meta name="twitter:title" content="Cloud-Computing Lecture4">
+<meta property="og:url" content="https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
+<meta property="twitter:url" content="https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
 <meta property="og:site_name" content="QiushiSun&#39;s Blog">
-<meta property="og:description" content="云计算应用与开发：云计算背后的技术-2">
-<meta name="twitter:description" content="云计算应用与开发：云计算背后的技术-2">
+<meta property="og:description" content="云计算应用与开发：云计算背后的技术-2 Cont&rsquo;d">
+<meta name="twitter:description" content="云计算应用与开发：云计算背后的技术-2 Cont&rsquo;d">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-10-20T18:23:37">
+    <meta property="article:published_time" content="2020-10-22T18:23:37">
   
   
-    <meta property="article:modified_time" content="2020-10-20T18:23:37">
+    <meta property="article:modified_time" content="2020-10-22T18:23:37">
   
   
   
@@ -53,8 +53,8 @@
 
 
 
-  <meta property="og:image" content="https://qiushisun.github.io/images/distributed-system.png">
-  <meta property="twitter:image" content="https://qiushisun.github.io/images/distributed-system.png">
+  <meta property="og:image" content="https://qiushisun.github.io/images/distributed-system-2.jpg">
+  <meta property="twitter:image" content="https://qiushisun.github.io/images/distributed-system-2.jpg">
 
 
 
@@ -64,14 +64,14 @@
   <meta property="twitter:image" content="https://qiushisun.github.io/images/myavatar.png">
 
 
-    <title>Cloud-Computing Lecture3</title>
+    <title>Cloud-Computing Lecture4</title>
 
     <link rel="icon" href="https://qiushisun.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+    <link rel="canonical" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -231,15 +231,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Cloud-Computing Lecture3
+      Cloud-Computing Lecture4
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-10-20T18:23:37&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-10-22T18:23:37&#43;08:00">
         
-  October 20, 2020
+  October 22, 2020
 
       </time>
     
@@ -260,67 +260,59 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>云计算应用与开发：云计算背后的技术-2</p>
-<h2 id="云计算应用与开发">云计算应用与开发</h2>
-<h3 id="lecture3-云计算背后的技术-2">Lecture3 云计算背后的技术-2</h3>
-<hr>
-<p>Preview：</p>
+              <p>云计算应用与开发：云计算背后的技术-2 Cont&rsquo;d</p>
+<h2 id="2020fall-云计算应用与开发">2020Fall 云计算应用与开发</h2>
+<h3 id="lecture3-云计算背后的技术-2-contd">Lecture3 云计算背后的技术-2 Cont&rsquo;d</h3>
+<h4 id="其他分布式计算模型mpimessage-passing-interface-消息传递接口">其他分布式计算模型：MPI(Message Passing Interface 消息传递接口)</h4>
 <ol>
-<li>目前工业界比较强的需求：面向AI的计算</li>
-<li>Amazon Elastic Computing</li>
-<li>分布式存储的好处（存储与计算的结合）</li>
+<li>需要程序员编写点对点收发消息的操作</li>
+<li>基于消息传递协议的并行编程接口</li>
+<li>比Hadoop/Spark更加灵活</li>
+<li>MPI可以实现MapReduce的功能，但反之不然</li>
+<li>缺少完善的容错机制，需要手动编写</li>
 </ol>
-<hr>
-<h4 id="扩展性能的需求scale-up-vs-scale-out">扩展性能的需求（scale-up vs scale-out）</h4>
+<p>Reading：https://mpi4py.readthedocs.io/en/stable/</p>
+<h4 id="其他分布式计算模型bspbulk-synchronous-parallel-整体同步并行计算">其他分布式计算模型：BSP(Bulk Synchronous Parallel 整体同步并行计算)</h4>
+<p>以superstep为单位的大同步并行计算</p>
 <ol>
-<li>Scale-up(Vertical Scaling)：现有系统中加入更多资源 e.g：更多CPU，内存，更快的网络</li>
-<li>Scale-out(Horizontal Scaling)：现有系统加入更多节点 e.g：更多主机节点和存储节点</li>
+<li>并发计算：并行本地内存计算</li>
+<li>通信：消息和数据交换</li>
+<li>路障同步：等待所有并行计算完成</li>
 </ol>
-<p>总结：Scale-up 靠增加处理器来提升运算能力，Scale-out 增加独立服务器来增加运算能力。Scale-up到上限时，就需要Scale-out来满足进一步的需求了</p>
-<p><!-- raw HTML omitted --></p>
-<p>了解：AWS Auto Scaling</p>
-<hr>
-<h4 id="分布式计算distributed-computing">分布式计算（Distributed Computing）</h4>
-<p>顺序结构；<strong>分支结构</strong>；循环结构</p>
-<p>MapReduce（Google：用什么处理这么海量数据？Map和Reduce！）</p>
-<h5 id="mapreduce的概念由jeff-dean和sanjay-ghemawat在2004年在-mapreduce-simplified-data-processing-on-large-clusters-中提出">MapReduce的概念：由Jeff Dean和Sanjay Ghemawat在2004年在 <em>MapReduce: Simplified data processing on large clusters</em> 中提出</h5>
-<h5 id="mapreduce的起源数据爆炸计算非常耗时数据处理必须依赖分布式计算并行化计算">MapReduce的起源：数据爆炸，计算非常耗时，数据处理必须依赖分布式计算并行化计算</h5>
+<p>内存存储vs磁盘存储？newsql</p>
+<h3 id="分布式存储distributed-storage-system">分布式存储（<strong>Distributed Storage System</strong>）</h3>
+<p>通过网络接连将数据存储在多个计算机节点上，通常用一种复制（多副本）的方式</p>
+<h4 id="分布式存储的类型">分布式存储的类型：</h4>
 <ol>
-<li>并行化计算</li>
-<li>分布式部署数据</li>
-<li>负载均衡</li>
-<li>容错机制</li>
+<li>结构化存储（分布式数据库）：MySQL / PostgreSQL (GreenPlum)</li>
+<li>非结构化存储：HDFS (Hadoop Distributed File System) / GFS (Google File System)</li>
+<li>半结构化存储：Bigtable / Hbase / Dynamo</li>
+<li>内存存储：Redis / MonetDB</li>
+<li>NewSQL：Google Spanner</li>
 </ol>
-<h5 id="而mapreduce将分布式计算抽象化隐藏上述实现细节">而MapReduce将分布式计算抽象化，隐藏上述实现细节</h5>
+<h4 id="分布式存储的关键技术">分布式存储的关键技术</h4>
 <ol>
-<li>Map Function：将原始数据转化为key/value pair</li>
-<li>Reduce Function：根据key聚合value，得到最后的计算结果</li>
+<li>数据一致性：不同副本的数据应当保持一致</li>
+<li>数据的均匀分布：不同服务器上数据应分布均匀</li>
+<li>容错机制：自动迁移和恢复数据，不要让错误和故障对数据的影响扩散太大，最好只影响自己</li>
+<li>负载均衡：将工作量分不到多个服务器上，单台机器上不合理的工作量会拖累整个系统</li>
+<li>并发控制：分布式事务处理</li>
 </ol>
-<h5 id="mapreducedataflow">MapReduce：Dataflow</h5>
+<h4 id="cap定理cconsistenceaavailabilityppartition-tolerance">CAP定理：C(consistence)A(availability)P(partition tolerance)</h4>
 <ol>
-<li>Input reader：读入文件并划分成固定大小的存储块（split，通常64M或128M），并分配到maper节点</li>
-<li><strong>Map：将split中的数据根据问题的需求转换为key/value pair并输出</strong></li>
-<li>Partition：将map函数的输出结果，根据key值分配到不同的reducer节点</li>
-<li>Comparison：对分配到每个reducer节点key/value pair进行排序</li>
-<li><strong>Reduce：根据问题需求对每个key的value进行迭代计算，输出key对应的最终结果</strong></li>
-<li>Output Writer：将reducer的输出结果写入磁盘文件系统</li>
+<li>分区容忍指的是网络分区</li>
+<li>CAP指的是各指标之间的的tradeoff</li>
+<li>CAP不可能三个同时满足</li>
 </ol>
-<h5 id="mapreduce理念任务通过切分数据的方式完成小任务最后再合并">MapReduce理念：任务通过切分数据的方式，完成小任务，最后再合并</h5>
+<h4 id="数据库架构">数据库架构：</h4>
 <ol>
-<li>可行：找海量数据中的最大值</li>
-<li>Map执行时候，各个Map操作之间是不需要通讯的</li>
+<li>了解Greenplum，Greenplum数据库架构相对于传统单机RDBMS可扩展性增强，可用性提高</li>
+<li>关系型数据库约束了可扩展性</li>
+<li>NoSQL：Not Only SQL，非关系型数据库管理系统，通常被认为是半结构化存储，高可用易扩展，不支持复杂的查询（e.g join）</li>
+<li>数据库的强一致性：在任何时刻所有的用户或者进程查询到的都是最近一次成功更新的数据。</li>
+<li>最终一致性：在某一时刻用户或者进程查询到的数据可能会不同，但是最终成功更新的数据都会被所有用户或者进程查询到</li>
+<li>弱一致性：数据更新后，用户或者进程访问到部分或者全部访问不到最新的更新</li>
 </ol>
-<p><!-- raw HTML omitted --></p>
-<h5 id="mapreduce的应用">MapReduce的应用：</h5>
-<ol>
-<li>统计URL访问频率 map: &lt;URL, 1&gt;; reduce: &lt;URL, totalCount&gt;</li>
-<li>反向Web链接图 map: &lt;targePage, sourcePage&gt;; reduce: &lt;targetPage, list (sourcePage)&gt;</li>
-<li>倒排索引 map: &lt;word, docID&gt;; reduce: &lt;word, list (docID)&gt;</li>
-</ol>
-<hr>
-<h4 id="hadoop分布式大数据计算的开源软件集合">Hadoop：分布式大数据计算的开源软件集合</h4>
-<h4 id="hadoop出现后才叫做大数据">Hadoop出现后，才叫做“大数据”！</h4>
-<p>Hadoop集群的使用请见Lab</p>
               
             </div>
           </div>
@@ -347,7 +339,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture4/" data-tooltip="Cloud-Computing Lecture4">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -355,7 +347,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture2/" data-tooltip="Cloud-Computing Lecture2">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture3/" data-tooltip="Cloud-Computing Lecture3">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -373,19 +365,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -433,7 +425,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture4/" data-tooltip="Cloud-Computing Lecture4">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -441,7 +433,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture2/" data-tooltip="Cloud-Computing Lecture2">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://qiushisun.github.io/2020/10/cloud-computing-lecture3/" data-tooltip="Cloud-Computing Lecture3">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -459,19 +451,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://qiushisun.github.io/2020/10/cloud-computing-lecture3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://qiushisun.github.io/2020/10/cloud-computing-lecture4/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -501,19 +493,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fqiushisun.github.io%2F2020%2F10%2Fcloud-computing-lecture3%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fqiushisun.github.io%2F2020%2F10%2Fcloud-computing-lecture4%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fqiushisun.github.io%2F2020%2F10%2Fcloud-computing-lecture3%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fqiushisun.github.io%2F2020%2F10%2Fcloud-computing-lecture4%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fqiushisun.github.io%2F2020%2F10%2Fcloud-computing-lecture3%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fqiushisun.github.io%2F2020%2F10%2Fcloud-computing-lecture4%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -605,9 +597,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/qiushisun.github.io\/2020\/10\/cloud-computing-lecture3\/';
+          this.page.url = 'https:\/\/qiushisun.github.io\/2020\/10\/cloud-computing-lecture4\/';
           
-            this.page.identifier = '\/2020\/10\/cloud-computing-lecture3\/'
+            this.page.identifier = '\/2020\/10\/cloud-computing-lecture4\/'
           
         };
         (function() {
