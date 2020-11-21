@@ -288,7 +288,7 @@
 <li>row store：表中每一行存储在连续的地址空间，适合处理大量attribute和record，通常采用schema，RDBMS（关系型数据库）常使用row store</li>
 <li>column store：表中每一列存储在连续的地址空间，适合少量attribute的range search，通常采用key-value形式</li>
 </ol>
-<p><!-- raw HTML omitted --></p>
+<p><img src="https://qiushisun.github.io/images/column-row-storage.png" alt="Hugo-logo-wide" title="storage method"></p>
 <hr>
 <h4 id="nosql所面临的挑战">NoSQL所面临的挑战</h4>
 <ol>
@@ -321,7 +321,7 @@
 </ol>
 <p>GFS vs HDFS：https://www.slideshare.net/YuvalCarmel/gfs-vs-hdfs</p>
 <h4 id="hdfs的架构">HDFS的架构</h4>
-<p><img src="https://github.com/QiushiSun/Cloud-Computing/blob/master/images/HDFSArchitecture.png" alt="HDFS"></p>
+<p><img src="https://qiushisun.github.io/images/HDFSArchitecture.png" alt="Hugo-logo-wide" title="HDFSArchitecture"></p>
 <h4 id="hdfs-的特性rightarrow-append-only">HDFS 的特性$\rightarrow$ append only!</h4>
 <p>读数据占多，很少去更新已经存在的文件，新数据仅仅是写在老数据后面，顺序地进行写入</p>
               
